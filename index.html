@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Storage Example</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="container">
+		<h1>Web Storage Examples</h1>
+		<section>
+			<p><em>Local storage</em> — The local storage uses the localStorage object to store data for your entire website, permanently. That means the stored local data will be available on the next day, the next week, or the next year unless you remove it.</p>
+			<p class="title">Local Storage Data Entry:</p>
+			<div class="wrapper">
+				<div class="form">
+					<form action="">
+						<p>
+							<label for="fname_local">First Name: </label>
+							<input type="text" id="fname_local">
+						</p>
+						<p>
+							<label for="lname_local">Last Name: </label>
+							<input type="text" id="lname_local">
+						</p>
+						<p>
+							<input type="submit" id="submit2" value="Submit">
+						</p>
+						<p>
+							<input type="submit" id="clear2" value="Clear Local Storage">
+						</p>
+					</form>
+				</div>
+			<p>Stored values: <span id="first_name_local"></span>&nbsp;<span id="last_name_local"></span></p>
+			</div> <!-- end of wrapper -->
+			<p><em>The localStorage Object</em><br>As stated earlier, the localStorage object stores the data with no expiration date. Each piece of data is stored in a key/value pair. The key identifies the name of the information (like 'first_name'), and the value is the value associated with that key (say 'Peter').</p>
+		</section>
+		<hr>
+		<section>
+			<p><em>Session storage</em> — The session storage uses the sessionStorage object to store data on a temporary basis, for a single window (or tab). The data disappears when session ends i.e. when the user closes that window (or tab).</p>
+			<p class="title">Session Storage Data Entry:</p>
+			<div class="wrapper">
+				<div class="form">
+					<form action="">
+						<p>
+							<label for="fname_session">First Name: </label>
+							<input type="text" id="fname_session">
+						</p>
+						<p>
+							<label for="lname_session">Last Name: </label>
+							<input type="text" id="lname_session">
+						</p>
+						<p>
+							<input type="submit" id="submit1" value="Submit">
+						</p>
+						<p>
+							<input type="submit" id="clear1" value="Clear Session Storage">
+						</p>
+					</form>
+				</div>
+			<p>You typed: <span id="first_name_session"></span>&nbsp;<span id="last_name_session"></span></p>
+			</div> <!-- end of wrapper -->
+			<p><em>The sessionStorage Object</em><br>The sessionStorage object work in the same way as localStorage, except that it stores the data only for one session i.e. the data remains until the user closes that window or tab.</p><br>
+		<p><em>Note:</em><br>The web storage data (both local and session) will not be available between different browsers, for example the data stored in Firefox browser will not available in Google Chrome, Internet Explorer or other browsers.</p><br><br>
+	</div> <!-- end of container -->
+	<script src="app.js"></script>
+</body>
+</html>
